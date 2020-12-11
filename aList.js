@@ -25,6 +25,23 @@ console.log(listToArray(arrayToList([10, 20, 30])));
 and creates a new list that adds the element to the front of the input 
 list. */
 
+function prepend(element, list) {
+    return {element, rest: list};
+}
+console.log(prepend(10, prepend(20, null)));
+
 /* Write a function nth, which takes a list and a number and returns 
 the element at the given position in the list (with zero referring to 
 the first element) or undefined when there is no such element. */
+
+function nth(list, number) {
+    for (let node = list; node; node = node.rest) {
+        if (list[node] == number) {
+            return node.value;
+        } else {
+            return undefined;
+        }
+    } 
+}
+
+console.log(nth(arrayToList([4, 5, 6, 7]), 6));

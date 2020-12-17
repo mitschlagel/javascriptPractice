@@ -33,3 +33,58 @@ function xor(b1, b2) {
         return true;
     }
 }
+
+// Write a function equals that checks two values for strict equality.
+
+function equals(x, y) {
+    if (x === y) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // Write a function equals that checks 3 values for strict equality. 
+  // The function should only return true if all 3 values are equal.
+
+  function equals(x, y, z) {
+      if (x === y && y === z) {
+          return true;
+      } else {
+          return false;
+      }
+  }
+
+  /* Write a function isEven that checks if a passed number is even.
+   If the given number is even, true should be returned, otherwise false. */
+
+   function isEven(n) {
+       if (n % 2 === 0) {
+           return true;
+       } else {
+           return false;
+       }
+   }
+
+/* Write a function unequal that checks 3 values for strict inequality. 
+The function should return true if all three parameters are strict unequal. 
+Otherwise false. */
+
+function unequal(a, b, c) {
+    if (a !== b && b !== c && a !== c) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/* Write a function isThreeDigit that checks if a number is greater than 
+or equal to 100 and less than 1000. */
+
+function isThreeDigit(n) {
+    if (n >= 100 && n < 1000) {
+        return true;
+    } else {
+        return false;
+    }
+}

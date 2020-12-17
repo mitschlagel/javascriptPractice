@@ -35,13 +35,10 @@ the element at the given position in the list (with zero referring to
 the first element) or undefined when there is no such element. */
 
 function nth(list, number) {
-    for (let node = list; node; node = node.rest) {
-        if (list[node] == number) {
-            return node.value;
-        } else {
-            return undefined;
-        }
-    } 
+    let listKeys = Object.keys(list);
+    for (let i = 0; i < number; i++) {
+        console.log(listKeys[i]);
+    }
 }
 
 console.log(nth(arrayToList([4, 5, 6, 7]), 6));

@@ -117,3 +117,11 @@ function list(array) {
 
 console.log(list(['hello', 'my', 'name', 'peaches']))
 
+
+// Write a function flat that flattens a two-dimensional array with 3 entries.
+
+function flat(array) {
+    let temp = array[0].concat(array[1]);
+    let result = temp.concat(array[2]);
+    return result;
+}

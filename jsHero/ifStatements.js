@@ -21,12 +21,19 @@ function repdigit(x) {
    amount greater than 10, the surcharge is 2. */
 
    function addWithSurcharge(x, y) {
-    let sum = x + y; 
-    if (sum <= 10) {
-       return sum + 1;
-     } else {
-       return sum + 2;
-     }
-   }
+    let surcharge = 0; 
+    if (x <= 10) {
+      surcharge += 1;
+    } else if (x > 10) {
+      surcharge += 2;
+    }
+    
+    if (y <= 10) {
+      surcharge += 1;
+    } else if (y > 10) {
+      surcharge += 2;
+    }
+    return x + y + surcharge;
+  }
 
    console.log(addWithSurcharge(12, 2));

@@ -92,11 +92,11 @@ function isPrime(n) {
 console.log(isPrime(8));
 
 // Write a function sum that calculates the sum of all elements of a two-dimensional array.
-
+// using array lengths as the conditions makes this funciton work for n-dimensional arrays
 function sum(array) {
     let total = 0;
-    for (let i = 0; i < 2; i++) {
-        for (let j = 0; j < 2; j++) {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
             total += array[i][j];
         }
     }

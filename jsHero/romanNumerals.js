@@ -1,4 +1,4 @@
-/* Write a function arabic that converts a Roman number (up to 1000) into an Arabic. */
+// Write a function arabic that converts a Roman number (up to 1000) into an Arabic.
 
 function arabic(roman) {
     const numerals = {
@@ -29,7 +29,7 @@ function arabic(roman) {
             i++; 
 
         } else {
-            
+
             // Add current value
             result += current;
         }
@@ -39,4 +39,35 @@ function arabic(roman) {
 
 }
 
-console.log(arabic('CDLXXXIII'));
+// console.log(arabic('CDLXXXIII'));
+
+// Write a function roman that converts an Arabic number (up to 1000) into a Roman numeral.
+
+function roman(arabic) {
+    const numerals = {
+        1: 'I',
+        5: 'V',
+        10: 'X',
+        50: 'L',
+        100: 'C',
+        500: 'D',
+        1000: 'M'
+    };
+    
+    const nums = Object.keys(numerals);
+    let input = arabic;
+    let result = "";
+
+    for (let i = 1; i < nums.length; i++) {
+        
+        while (input > i) {
+            result += numerals[nums[nums.length - i]];
+            input -= nums[nums.length - i];
+        }
+    
+    }
+    
+    return result;
+}
+
+console.log(roman(483));
